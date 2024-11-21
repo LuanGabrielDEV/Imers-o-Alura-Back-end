@@ -1,3 +1,4 @@
 node_modules
 API.txt
 mongo.txt
+.env
