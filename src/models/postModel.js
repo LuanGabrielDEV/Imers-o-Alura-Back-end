@@ -9,3 +9,10 @@ export async function getTodosPosts() {
     const colecao = db.collection("posts") // Seleciona a coleção de posts
     return colecao.find().toArray() // Retorna todos os documentos da coleção como um array
 }
+
+
+export async function criarPost(novoPost) {
+    const db = conexao.db("Imersao-instabyte")
+    const colecao = db.collection("posts")
+    return colecao.insertOne(novoPost)
+}
